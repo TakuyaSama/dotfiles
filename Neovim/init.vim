@@ -3,6 +3,7 @@ set nocompatible
 filetype plugin on
 set wildmode=longest,list,full
 set number
+set rnu
 set numberwidth=1
 syntax on
 set foldmethod=syntax
@@ -69,6 +70,9 @@ let g:forest_night_enable_italic = 1
 let g:forest_night_disable_italic_comment = 1
 
 colorscheme forest-night
+
+" HTML Snippet/Skeleton Map
+nnoremap ,html :-1read $HOME/.config/nvim/snippets/skeleton.html<CR>3jwf>a
 
 "42-HEADER CONFIG
 let $USER = 'adiaz-lo'
