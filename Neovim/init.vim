@@ -77,4 +77,4 @@ nnoremap ,html :-1read $HOME/.config/nvim/snippets/skeleton.html<CR>3jwf>a
 "42-HEADER CONFIG
 let $USER = 'adiaz-lo'
 let $MAIL = $USER . '@student.42madrid.com'
-"nmap <f1> :Stdheader<CR>
+nmap <F1> :Stdheader<CR>
