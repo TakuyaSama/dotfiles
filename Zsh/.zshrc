@@ -220,8 +220,23 @@ alias logs="find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1
 alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 alias grep='grep --color=auto'
 alias zshconfig="mate ~/.zshrc"
+#ProtonVPN Aliases
 alias protonvpn_c="sudo protonvpn connect"
 alias protonvpn_d="sudo protonvpn disconnect"
+#Git Aliases
+alias pull="git pull"
+alias commit="git commit"
+alias status="git status"
+alias push="git push"
+alias add="git add"
+alias clone="git clone"
+#Mbsync Aliases
+alias email_sync="mbsync -a"
+#NeoMutt Aliases
+
+#Exporting Default Editor Both CLI & VISUAL
+export EDITOR=nvim
+export VISUAL=nvim
 
 ### Bind keys
 #############
@@ -357,10 +372,26 @@ zstyle ':completion:*:ssh:*' group-order \
    hosts-domain hosts-host users hosts-ipaddr
 zstyle '*' single-ignored show
 
-### Source plugins
-##################
-source ~/Software/Zsh/powerlevel10k/powerlevel10k.zsh-theme
+# Antigen Zsh Plugin Manager
+source ~/.antigen.zsh
+
+# Powerlevel10k Zsh Theme
+antigen theme romkatv/powerlevel10k
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Zsh autocompletion
+antigen bundle zsh-users/zsh-completions
+
+# Zsh autosugestion
+antigen bundle zsh-users/zsh-autosuggestions
+
+# Zsh history search
+antigen bundle zsh-users/zsh-history-substring-search
+
+# Antigen apply
+antigen apply
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/Software/Zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
