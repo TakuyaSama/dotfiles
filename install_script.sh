@@ -22,3 +22,7 @@ echo "tmux configuration file linked"
 # Link Alacritty configuration file to its default path
 ln ./Alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 echo "Alacritty configuration file linked"
+
+# Link lf configuration file to its default path
+ln ./lf/lfrc ~/.config/lf/lfrc
+echo "lf configuration file linked"
