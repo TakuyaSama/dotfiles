@@ -234,6 +234,9 @@ alias clone="git clone"
 alias email_sync="mbsync -a"
 #NeoMutt Aliases
 
+#lf Aliases
+alias mc='tmux split -h lf; lf'
+
 #Exporting Default Editor Both CLI & VISUAL
 export EDITOR=nvim
 export VISUAL=nvim
@@ -395,3 +398,6 @@ antigen apply
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Starship Installation
+#eval "$(starship init zsh)"
