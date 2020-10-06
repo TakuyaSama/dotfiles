@@ -61,7 +61,7 @@ PATH="/usr/local/bin:/usr/local/sbin/:$PATH"
 HISTFILE=$HOME/.zhistory
 HISTSIZE=1000
 SAVEHIST=1000
-HOSTNAME="`hostname`"
+#HOSTNAME="`hostname`"
 LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:';
 
 ### Load colors
@@ -220,6 +220,14 @@ alias logs="find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1
 alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 alias grep='grep --color=auto'
 alias zshconfig="mate ~/.zshrc"
+#Pacman Aliases
+alias install="sudo pacman -S"
+alias remove="sudo pacman -Rsncu"
+#alias orphans="sudo pacman -Qtdq | sudo pacman -Rns -"
+alias orphans="sudo pacman -Rs $(pacman -Qtdq)"
+alias update="sudo pacman -Syu"
+alias clean="sudo pacman -Scc"
+alias package_info="pacman -Qi"
 #ProtonVPN Aliases
 alias protonvpn_c="sudo protonvpn connect"
 alias protonvpn_d="sudo protonvpn disconnect"
