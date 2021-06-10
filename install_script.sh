@@ -26,3 +26,12 @@ echo "Alacritty configuration file linked"
 # Link lf configuration file to its default path
 ln -f ./lf/lfrc ~/.config/lf/lfrc
 echo "lf configuration file linked"
+
+# Link cursor theme folder to its correct path
+mkdir -p ~/.icons/
+ln -F ./Cursors/El_Capitan_Cursors ~/.icons/
+echo "macOS El Capitan Cursor Theme Linked"
+
+#Link neofetch configuration file
+mkdir -p ~/.config/neofetch
+ln -f ./neofetch/config.conf ~/.config/neofetch/config.conf
