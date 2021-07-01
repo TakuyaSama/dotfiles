@@ -8,7 +8,6 @@ set numberwidth=1
 syntax on
 set foldmethod=syntax
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='simple'
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -49,7 +48,17 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug '42Paris/42header'
 
 "Forst Night Theme
-Plug 'sainnhe/forest-night'
+Plug 'sainnhe/everforest'
+
+if has('termguicolors')
+	set termguicolors
+endif
+
+"Dark version
+set background=dark
+
+"Set contrast
+let g:everforest_background = 'hard'
 
 "C Vim
 Plug 'vim-scripts/c.vim'
@@ -61,15 +70,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Initialize plugin system
 call plug#end()
 
-" Forest Night Theme
-" important!!
-set termguicolors
+colorscheme everforest
 
-" the configuration options should be placed before `colorscheme forest-night`
-let g:forest_night_enable_italic = 1
-let g:forest_night_disable_italic_comment = 1
-
-colorscheme forest-night
+"Airline
+let g:airline_theme = 'everforest'
 
 " HTML Snippet/Skeleton Map
 nnoremap ,html :-1read $HOME/.config/nvim/snippets/skeleton.html<CR>3jwf>a
