@@ -60,6 +60,42 @@ set background=dark
 "Set contrast
 let g:everforest_background = 'hard'
 
+"Customize the cursor color, only works in GUI clients.
+let g:everforest_cursor = 'aqua'
+
+"Whether to show |hl-EndOfBuffer|.
+let g:everforest_show_eob = 1
+
+"Some plugins support highlighting error/warning/info/hint texts, by default
+"these texts are only underlined, but you can use this option to also highlight
+"the background of them.
+let g:everforest_diagnostic_text_highlight = 1
+
+"Some plugins support highlighting error/warning/info/hint lines, but this
+"feature is disabled by default in this color scheme. To enable this feature,
+"set this option to `1`.
+let g:everforest_diagnostic_line_highlight = 1
+
+"Some plugins can use virtual text feature of neovim to display
+"error/warning/info/hint information, you can use this option to adjust the
+"colors of it.
+let g:everforest_diagnostic_virtual_text = 'colored'
+
+"Some plugins can highlight the word under current cursor, you can use this
+"option to control their behavior.
+
+"    Available values: `'grey background'`, `'bold'`, `'underline'`, `'italic'`
+"    Default value: `'grey background'` when not in transparent mode, `'bold'`
+"    when in transparent mode.
+let g:everforest_current_word = 'bold'
+
+"The loading time of this color scheme is very long because too many file types
+"and plugins are optimized. This feature allows you to load part of the code on
+"demand by placing them in the `after/ftplugin` directory.
+
+"Enabling this option will reduce loading time by approximately 50%.
+let g:everforest_better_performance = 1
+
 "C Vim
 Plug 'vim-scripts/c.vim'
 
