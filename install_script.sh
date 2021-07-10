@@ -35,3 +35,7 @@ echo "macOS El Capitan Cursor Theme Linked"
 #Link neofetch configuration file
 mkdir -p ~/.config/neofetch
 ln -f ./neofetch/config.conf ~/.config/neofetch/config.conf
+
+#Link MPV file to use it with KDE Connect
+mkdir -p ~/.config/mpv/scripts/
+ln -f ./MPV/mpris.so ~/.config/mpv/scripts/mpris.so
