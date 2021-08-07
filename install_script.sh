@@ -39,3 +39,7 @@ ln -f ./neofetch/config.conf ~/.config/neofetch/config.conf
 #Link MPV file to use it with KDE Connect
 mkdir -p ~/.config/mpv/scripts/
 ln -f ./MPV/mpris.so ~/.config/mpv/scripts/mpris.so
+
+#MangoHud Configuration
+mkdir -p ~/.config/MangoHud/
+ln -f ./MangoHud/MangoHud.conf ~/.config/MangoHud/MangoHud.conf
