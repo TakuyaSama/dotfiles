@@ -387,7 +387,7 @@ zstyle '*' single-ignored show
 source ~/.antigen.zsh
 
 # Powerlevel10k Zsh Theme
-antigen theme romkatv/powerlevel10k
+#antigen theme romkatv/powerlevel10k
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -405,7 +405,7 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen apply
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Starship Installation
-#eval "$(starship init zsh)"
+eval "$(starship init zsh)"
