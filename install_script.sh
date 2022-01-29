@@ -43,3 +43,6 @@ ln -f ./MPV/mpris.so ~/.config/mpv/scripts/mpris.so
 #MangoHud Configuration
 mkdir -p ~/.config/MangoHud/
 ln -f ./MangoHud/MangoHud.conf ~/.config/MangoHud/MangoHud.conf
+
+#Starship Configuration File
+ln -f ./Starship/starship.toml ~/.config/starship.toml
