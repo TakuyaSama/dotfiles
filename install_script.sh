@@ -57,3 +57,9 @@ mkdir -p ~/.config/sway/
 ln -f ./sway/config ~/.config/sway/config
 ln -f .sway/config.d ~/.config/sway/config.d
 echo "sway configuration files done"
+
+#waybar Configuration Files
+mkdir -p ~/.config/waybar/
+ln -f ./waybar/config ~/.config/waybar/config
+ln -f ./waybar/styles.css ~/.config/waybar/styles.css
+echo "waybar configuration files done"
