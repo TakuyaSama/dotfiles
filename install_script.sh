@@ -46,3 +46,7 @@ ln -f ./MangoHud/MangoHud.conf ~/.config/MangoHud/MangoHud.conf
 
 #Starship Configuration File
 ln -f ./Starship/starship.toml ~/.config/starship.toml
+
+#dunst Configuration File
+mkdir -p ~/.config/dunst/
+ln -f ./dunst/dunstrc ~/.config/dunst/dunstrc
