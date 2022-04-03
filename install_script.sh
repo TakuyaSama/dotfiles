@@ -50,3 +50,10 @@ ln -f ./Starship/starship.toml ~/.config/starship.toml
 #dunst Configuration File
 mkdir -p ~/.config/dunst/
 ln -f ./dunst/dunstrc ~/.config/dunst/dunstrc
+echo "dunst configuration file done"
+
+#sway Configuration Files
+mkdir -p ~/.config/sway/
+ln -f ./sway/config ~/.config/sway/config
+ln -f .sway/config.d ~/.config/sway/config.d
+echo "sway configuration files done"
