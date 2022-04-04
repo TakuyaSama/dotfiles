@@ -249,6 +249,9 @@ alias mc='tmux split -h lf; lf'
 export EDITOR=nvim
 export VISUAL=nvim
 
+#Exporting Global Variables
+export LC_TIME=es_ES
+
 ### Bind keys
 #############
 autoload -U compinit
@@ -409,3 +412,8 @@ antigen apply
 
 # Starship Installation
 eval "$(starship init zsh)"
+
+# Autologin For Sway
+if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec sway
+fi
