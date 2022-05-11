@@ -29,8 +29,9 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Example configuration:
 #
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-   output DVI-D-1 resolution 1920x1080 position 0,0
+   output HDMI-A-2 resolution 1920x1080 position 0,0
+   output eDP-1 disable
+#   output DVI-D-1 resolution 1920x1080 position 0,0
 #   output DVI-D-1 pos 0 0 res 1920x1080
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -52,12 +53,19 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Example configuration:
 #
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+    input "2:14:SynPS/2_Synaptics_TouchPad" {
 #       dwt enabled
-#       tap enabled
+        tap enabled
 #       natural_scroll enabled
 #       middle_emulation enabled
-#   }
+   }
+#VANT ultraMOOVE 13 TouchPad Config
+    input "2:7:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+        tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+  }
 #   Keyboard Layout Configuration
     input * {
         xkb_layout "us"
@@ -107,7 +115,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
     bindsym Print exec grim - | wl-copy
 
     # Launch Screenshot (slurp + brim) And Copies To Clipboard
-    bindsym $mod2+Print exec 'grim -g "$(slurp)"' | wl-copy
+    bindsym $mod+Print exec grim -g "$(slurp)" - | wl-copy --type image/png
 
     #Launch Exodus
     bindsym $mod2+m exec exodus
@@ -275,5 +283,10 @@ bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ 
 bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+# Includes Extra Configuration Files
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d
+include ~/.config/kanshi/*
+
+# Run kanshi
+exec kanshi
