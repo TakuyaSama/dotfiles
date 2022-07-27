@@ -90,11 +90,8 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
     # Launch Firefox
     bindsym $mod2+f exec firefox
 
-    # Launch Brave
-    bindsym $mod2+b exec brave
-
-    # Launch Vivaldi
-    bindsym $mod2+v exec vivaldi
+    # Launch Calibre
+    bindsym $mod2+b exec calibre
 
     # Launch Steam
     bindsym $mod2+g exec steam
