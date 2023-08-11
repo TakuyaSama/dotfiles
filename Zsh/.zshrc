@@ -228,6 +228,8 @@ alias orphans="sudo pacman -Rs $(pacman -Qtdq)"
 alias update="sudo pacman -Syu"
 alias clean="sudo pacman -Scc"
 alias package_info="pacman -Qi"
+# Reflector Alias
+alias reflec="sudo reflector --verbose --country "France" -p https --sort age --save /etc/pacman.d/mirrorlist"
 #ProtonVPN Aliases
 alias protonvpn_c="sudo protonvpn connect"
 alias protonvpn_d="sudo protonvpn disconnect"
@@ -238,6 +240,9 @@ alias status="git status"
 alias push="git push"
 alias add="git add"
 alias clone="git clone"
+#rsync Aliases
+alias cpr='rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1'
+alias mvr='rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files'
 #Mbsync Aliases
 alias email_sync="mbsync -a"
 #NeoMutt Aliases
@@ -251,6 +256,15 @@ export VISUAL=nvim
 
 #Exporting Global Variables
 export LC_TIME=es_ES
+export LC_ALL=en_US.UTF-8
+export XDG_CURRENT_DESKTOP=sway
+
+# Environment Variables
+export SWAY_CURSOR_THEME=El_Capitan_CursorsMODNew
+
+# Scale Variables
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export QT_SCALE_FACTOR=1.2 export ELM_SCALE=1.2
 
 ### Bind keys
 #############
@@ -417,3 +431,6 @@ eval "$(starship init zsh)"
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
   exec sway
 fi
+
+#Wlsunset
+#wlsunset -S 10:00
