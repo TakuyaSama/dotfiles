@@ -97,13 +97,13 @@ conflicted = "= "
 ahead = "⇡ ${count} "
 behind = "⇣ ${count} "
 diverged = "⇕ "
-up_to_date = "✓"
-untracked = "? "
-stashed = "$ "
-modified = "! "
-staged = '[++\($count\)](green)'
+up_to_date = "✓ "
+untracked = "? ${count} "
+stashed = "$ ${count} "
+modified = "!${count} "
+staged = '[+$count](green) '
 renamed = "» "
-deleted = " "
+deleted = " (red)"
 
 #[git_status]
 #disabled = true
