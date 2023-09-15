@@ -61,14 +61,23 @@ style = "bold green"
 #default = "unknown shell"
 #format = "with [$env_value]($style) "
 
+#[git_branch]
+#symbol = "🌱 " # 
+#truncation_length = 8
+#truncation_symbol = "..."
+#style = "bold purple"
+#format = "on [$symbol$branch]($style) "
+
 [git_branch]
-symbol = "🌱 " # 
-truncation_length = 8
-truncation_symbol = "..."
-style = "bold purple"
-format = "on [$symbol$branch]($style) "
+symbol = " "
+style = "bold blue"
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
 
 [git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
 cherry_pick = "[🍒 PICKING](bold red)"
 rebase = "[⛓ REBASING](bold gray)"
 merge = "[⚗ MERGING](bold purple)"
@@ -76,10 +85,28 @@ revert = "[🧙🏽‍ REVERTING](bold pink)"
 bisect = "[🥩 BISECTING](bold bright-red)"
 am = "AM"
 am_or_rebase = "AM/REBASE"
-format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_metrics]
+added_style = "bold blue"
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_status]
-disabled = true
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "cyan"
+conflicted = "= "
+ahead = "⇡ ${count} "
+behind = "⇣ ${count} "
+diverged = "⇕ "
+up_to_date = "✓"
+untracked = "? "
+stashed = "$ "
+modified = "! "
+staged = '[++\($count\)](green)'
+renamed = "» "
+deleted = " "
+
+#[git_status]
+#disabled = true
 #conflicted = "🤬"
 #ahead = "🏎💨"
 #behind = "😰"
@@ -104,7 +131,7 @@ disabled = true
 [memory_usage]
 disabled = false
 threshold = 1
-symbol = " "
+symbol = "󰍛 "
 style = "bold dimmed white"
 format = "$symbol[${ram}]($style) $ram_pct "
 
