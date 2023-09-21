@@ -29,7 +29,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Example configuration:
 #
-   output HDMI-A-2 resolution 1920x1080 position 0,0
+   output HDMI-A-2 resolution 3440x1440 position 0,0
    output eDP-1 disable
 #   output DVI-D-1 resolution 1920x1080 position 0,0
 #   output DVI-D-1 pos 0 0 res 1920x1080
@@ -40,10 +40,10 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Example configuration:
 #
- exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -87,23 +87,23 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
     # Launch Telegram Desktop
     bindsym $mod2+t exec telegram-desktop
 
-    # Launch Firefox
-    bindsym $mod2+f exec firefox
+    # Launch FireDragon
+    bindsym $mod2+f exec firedragon
 
-    # Launch Calibre
-    bindsym $mod2+b exec calibre
+    # Launch Brave
+    bindsym $mod2+b exec brave
 
     # Launch Steam
     bindsym $mod2+g exec steam
+
+	# Launch Jellyfin Media Player
+	bindsym $mod2+j exec jellyfinmediaplayer
 
     # Launch Neovim
     bindsym $mod2+n exec alacritty -e nvim
 
     # Launch wofi
     bindsym $mod2+space exec --no-startup-id wofi --show run -show-icons
-
-    # Launch RetroArch
-    bindsym $mod2+r exec retroarch
 
     # Launch lf
     bindsym $mod2+e exec alacritty -e lf
@@ -270,6 +270,14 @@ bindsym $mod+r mode "resize"
 bar {
     swaybar_command waybar
 }
+
+#
+#No titlebars
+#
+default_border none 
+for_window [title="^.*"] title_format ""
+default_border normal 0
+default_floating_border normal 0
 
 # Notification Daemon
 exec dunst

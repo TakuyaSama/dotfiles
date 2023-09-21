@@ -77,7 +77,7 @@
     "clock": {
         // "timezone": "Europe/Madrid",
 	"interval": 1,
-	"format": "{:%I:%M:%S %p}",
+	"format": "{:%I:%M:%OS %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%e-%m-%Y}"
     },
@@ -118,7 +118,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%)   {bandwidthDownBits}   {bandwidthUpBits}",
-        "format-ethernet": "{ipaddr}   {bandwidthDownBits}   {bandwidthUpBits}",
+        "format-ethernet": "{ipaddr}     {bandwidthDownBits}     {bandwidthUpBits}",
         "tooltip-format": "{ifname} via {gwadr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
