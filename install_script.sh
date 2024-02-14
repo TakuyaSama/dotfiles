@@ -16,8 +16,8 @@ ln -f ./Neovim/init.vim ~/.config/nvim/init.vim
 echo "Neovim configuration file linked"
 
 # Link tmux configuration file to its default path
-ln -f ./tmux/.tmux.conf ~/.tmux.conf
-echo "tmux configuration file linked"
+#ln -f ./tmux/.tmux.conf ~/.tmux.conf
+#echo "tmux configuration file linked"
 
 # Link Alacritty configuration file to its default path
 ln -f ./Alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
@@ -36,10 +36,6 @@ echo "macOS El Capitan Cursor Theme Linked"
 mkdir -p ~/.config/neofetch
 ln -f ./neofetch/config.conf ~/.config/neofetch/config.conf
 
-#Link MPV file to use it with KDE Connect
-mkdir -p ~/.config/mpv/scripts/
-ln -f ./MPV/mpris.so ~/.config/mpv/scripts/mpris.so
-
 #MangoHud Configuration
 mkdir -p ~/.config/MangoHud/
 ln -f ./MangoHud/MangoHud.conf ~/.config/MangoHud/MangoHud.conf
@@ -48,18 +44,18 @@ ln -f ./MangoHud/MangoHud.conf ~/.config/MangoHud/MangoHud.conf
 ln -f ./Starship/starship.toml ~/.config/starship.toml
 
 #dunst Configuration File
-mkdir -p ~/.config/dunst/
-ln -f ./dunst/dunstrc ~/.config/dunst/dunstrc
-echo "dunst configuration file done"
+#mkdir -p ~/.config/dunst/
+#ln -f ./dunst/dunstrc ~/.config/dunst/dunstrc
+#echo "dunst configuration file done"
 
 #sway Configuration Files
-mkdir -p ~/.config/sway/
-ln -f ./sway/config ~/.config/sway/config
-ln -f .sway/config.d ~/.config/sway/config.d
-echo "sway configuration files done"
+#mkdir -p ~/.config/sway/
+#ln -f ./sway/config ~/.config/sway/config
+#ln -f .sway/config.d ~/.config/sway/config.d
+#echo "sway configuration files done"
 
 #waybar Configuration Files
-mkdir -p ~/.config/waybar/
-ln -f ./waybar/config ~/.config/waybar/config
-ln -f ./waybar/styles.css ~/.config/waybar/styles.css
-echo "waybar configuration files done"
+#mkdir -p ~/.config/waybar/
+#ln -f ./waybar/config ~/.config/waybar/config
+#ln -f ./waybar/styles.css ~/.config/waybar/styles.css
+#echo "waybar configuration files done"
