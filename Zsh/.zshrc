@@ -220,6 +220,7 @@ alias logs="find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1
 alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 alias grep='grep --color=auto'
 alias zshconfig="mate ~/.zshrc"
+alias monitor=btm
 #Pacman Aliases
 alias install="sudo pacman -S"
 alias remove="sudo pacman -Rsncu"
@@ -257,10 +258,11 @@ export VISUAL=nvim
 #Exporting Global Variables
 export LC_TIME=es_ES
 export LC_ALL=en_US.UTF-8
-export XDG_CURRENT_DESKTOP=sway
+#export XDG_CURRENT_DESKTOP=sway
 
 # Environment Variables
-export SWAY_CURSOR_THEME=El_Capitan_CursorsMODNew
+#export SWAY_CURSOR_THEME=El_Capitan_CursorsMODNew
+export MOZ_ENABLE_WAYLAND=1
 
 # Scale Variables
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
