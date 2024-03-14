@@ -12,6 +12,7 @@ cp -R ./Zsh/.p10k.zsh ~/.p10k.zsh
 echo "Zsh theme powerlevel10K file linked"
 
 # Link Neovim configuration file to its default path
+mkdir -p $HOME/.config/nvim/
 cp -R ./Neovim/init.vim ~/.config/nvim/init.vim
 echo "Neovim configuration file linked"
 
