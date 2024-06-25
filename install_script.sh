@@ -21,7 +21,7 @@ echo "Neovim configuration file linked"
 #echo "tmux configuration file linked"
 
 # Link Alacritty configuration file to its default path
-cp -R ./Alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+cp -R ./Alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 echo "Alacritty configuration file linked"
 
 # Link lf configuration file to its default path
