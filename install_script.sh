@@ -48,6 +48,10 @@ cp -R ./Starship/starship.toml ~/.config/starship.toml
 mkdir -p ~/.config/zellij
 cp -R ./Zellij/zellij.kdl ~/.config/zellij/zellij.kdl
 
+#Fonts
+mkdir $HOME/.local/share/fonts
+cp -R ./Fonts/Google Fonts/Inter/Inter-VariableFont_slnt,wght.ttf ~/.local/share/fonts/Inter-VariableFont_slnt,wght.ttf
+echo "Inter Fonts Copied"
 
 #dunst Configuration File
 #mkdir -p ~/.config/dunst/
