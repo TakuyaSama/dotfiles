@@ -105,7 +105,7 @@ multiplier = 3
 
 [shell]
 args = ["--login"]
-program = "/usr/bin/fish"
+program = "/usr/bin/zsh"
 
 [window]
 decorations = "full"
