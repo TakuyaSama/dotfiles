@@ -53,6 +53,10 @@ mkdir $HOME/.local/share/fonts
 cp -R ./Fonts/Google Fonts/Inter/Inter-VariableFont_slnt,wght.ttf ~/.local/share/fonts/Inter-VariableFont_slnt,wght.ttf
 echo "Inter Fonts Copied"
 
+#Zed Editor
+mkdir $HOME/.config/zed
+cp -R ./zed/ ~/.config/zed/
+
 #dunst Configuration File
 #mkdir -p ~/.config/dunst/
 #cp -R ./dunst/dunstrc ~/.config/dunst/dunstrc
